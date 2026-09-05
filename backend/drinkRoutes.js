@@ -8,8 +8,9 @@ const drinkRoutes = express.Router();
 
 drinkRoutes.route("/api/drinks").get(async (req, res) => {
     //TODO Add query string logic for filtering
-    //TODO Replace with actual database querying
-    res.json(data);
+    allDrinks = await data.getDatabase().collection("drinks").find().toArray();
+    console.log(allDrinks);
+    res.json(allDrinks);
 });
 
 

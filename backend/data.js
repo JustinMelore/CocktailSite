@@ -1,34 +1,26 @@
-//TODO: Replace with actual database implementation
-const elements = [
-    {
-        "name": "Margarita",
-        "ingredients": [
-            {
-                "ingredient": "Blanco Tequila",
-                "quantity": "1.5 oz"
-            },
-            {
-                "ingredient": "Triple Sec",
-                "quantity": "0.75 oz"
-            },
-            {
-                "ingredient": "Lime Juice",
-                "quantity": "0.75 oz"
-            },
-            {
-                "ingredient": "Agave Nectar",
-                "quantity": "0.25 oz"
-            }
-        ],
-        "garnish": [
-            "Salt"
-        ],
-        "steps": [
-            "Add tequila, triple sec, lime juice, and agave nectar to a cocktail shaker with ice. Shake for ~20 seconds.",
-            "Rim your serving glass with salt if desired. Use lime juice to make the salt stick to the glass better.",
-            "Pour the shaken cocktail into your glass over ice."
-        ]
-    }
-]
+const { MongoClient } = require("mongodb");
 
-module.exports = elements;
+const uri = process.env.DB_CONN;
+
+const client = new MongoClient(uri);
+
+let db;
+
+async function connectToDatabase() {
+    try {
+        await client.connect();
+        db = client.db("drinkData");
+    } catch(e) {
+        console.error(e);
+    }
+
+}
+
+function getDatabase() {
+    return db;
+}
+
+module.exports = {
+    connectToDatabase: connectToDatabase,
+    getDatabase: getDatabase
+}
