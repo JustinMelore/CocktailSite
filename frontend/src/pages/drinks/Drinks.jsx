@@ -1,9 +1,5 @@
-function Drinks() {
+export default function Drinks() {
     return (
-        <>
-            <h1>Drinks Page</h1>
-        </>
+        <h1>DRINKS</h1>
     )
 }
-
-export default Drinks;
