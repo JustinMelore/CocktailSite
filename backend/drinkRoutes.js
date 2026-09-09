@@ -8,8 +8,8 @@ const drinkRoutes = express.Router();
 
 drinkRoutes.route("/api/drinks").get(async (req, res) => {
     //TODO Add query string logic for filtering
-    allDrinks = await data.getDatabase().collection("drinks").find().toArray();
-    console.log(allDrinks);
+    console.log(`Allow origin in route: ${res.get("Access-Control-Allow-Origin")}`);
+    allDrinks = await data.getDatabase().collection("drinks").find().sort({name: 1}).toArray();
     res.json(allDrinks);
 });
 

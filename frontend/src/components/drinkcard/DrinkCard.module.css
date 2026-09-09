@@ -1,23 +1,16 @@
 .drinkCard {
     background-color: rgb(56, 55, 55);
     width: 100%;
-    height: 0;
+    height: 60vh;
     padding-top: 100%;
     transition: scale 0.1s;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
-}
-
-.drinkCard .dummy {
-    padding: 0.5em;
-    position: absolute;
+    padding: 0.5em 0.5em 1em 0.5em;
     display: flex;
     flex-direction: column;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    justify-content: space-evenly;
 }
 
 .drinkCard:hover {
@@ -31,31 +24,35 @@
     padding-bottom: 0.1em;
 }
 
-.drinkCard h3 {
-    font-size: 1.5em;
-    text-align: center;
-    margin: 0.2em 0;
-}
-
 .drinkCard img {
-    width: 8.5em;
-    height: 8.5em;
+    /* width: 18em;
+    height: 18em; */
+    width: 100%;
+    height: 70%;
     align-self: center;
     background-color: red;
+    border-radius: 20px;
+    padding: 0.2em;
 }
 
 .drinkCard ul {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5%;
-    row-gap: 0.5em;
+    column-gap: 3%;
+    row-gap: 0.5em; */
+    display: flex;
     align-items: center;
+    width: 100%;
     padding: 0 0.1em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .drinkCard li {
-    font-size: 0.8em;
-    width: 100%;
+    font-size: 1em;
+    padding: 0 0.3em;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Tablet Layout */
