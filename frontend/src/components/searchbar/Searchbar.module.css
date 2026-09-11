@@ -1,0 +1,36 @@
+.searchbar {
+    display: flex;
+    background-color: white;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.searchbar input {
+    border: 0;
+    height: 100%;
+}
+
+.searchbar input:focus-visible {
+    outline: none;
+}
+
+.searchbar input[type=text] {
+    padding-left: 1em;
+    flex-grow: 1;
+    color: black;
+}
+
+.searchbar input[type=submit] {
+    width: 5%;
+    cursor: pointer;
+    background-image: url("../../assets/search-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.searchbar input[type=submit]:hover {
+    filter: brightness(0.9);
+}

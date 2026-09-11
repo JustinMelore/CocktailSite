@@ -28,7 +28,15 @@
     overflow: visible;
 }
 
+.searchbarContainer {
+    width: 80vw;
+    height: 5vh;
+    margin-bottom: 5vh;
+}
 
+.searchbarContainer form input {
+    font-size: 1em;
+}
 
 /* Tablet layout */
 @media (max-width: 1024px) {
