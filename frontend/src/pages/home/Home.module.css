@@ -1,0 +1,45 @@
+.home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(0.75rem + 1vmin);
+    padding-top: 3em;
+    background-image: url("../../assets/bar-background.jpg");
+    background-size: cover;
+}
+
+.home h1 {
+    font-size: 4em;
+    margin: 0.5em 0;
+    text-shadow: 0 0 7px black;
+    text-align: center;
+}
+
+.home img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 1em;
+    border: 1em inset white;
+    background-color: rgba(227, 128, 46, 0.968);
+}
+
+.dummy {
+    height: 0;
+    width: 18%;
+    padding-bottom: 18%;
+    position: relative;
+}
+
+.searchbarContainer {
+    width: 90vw;
+    height: 7vh;
+}
+
+.searchbarContainer form input {
+    font-size: 1.5em;
+}
