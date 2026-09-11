@@ -7,13 +7,22 @@ const data = require("./data");
 const drinkRoutes = express.Router();
 
 drinkRoutes.route("/api/drinks").get(async (req, res) => {
-    allDrinks = [];
+    let allDrinks = [];
     if(req.query.search) {
         const searchQuery = getSearchQuery(req.query.search);
         allDrinks = await data.getDatabase().collection("drinks").aggregate([searchQuery]).toArray();
     } else
         allDrinks = await data.getDatabase().collection("drinks").find().sort({name: 1}).toArray();
     res.json(allDrinks);
+});
+
+drinkRoutes.route("/api/drinks/:drinkName").get(async (req, res) => {
+    const drink = await data.getDatabase().collection("drinks").findOne({name: req.params.drinkName});
+    if(drink) {
+        res.json(drink);
+    } else {
+        res.status(404).end("Could not find drink with name " + req.params.drinkName);
+    }
 });
 
 /**

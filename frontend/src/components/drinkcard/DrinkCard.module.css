@@ -13,6 +13,10 @@
     justify-content: space-evenly;
 }
 
+.drinkCardLink {
+    overflow: visible;
+}
+
 .drinkCard:hover {
     scale: 1.1;
 }

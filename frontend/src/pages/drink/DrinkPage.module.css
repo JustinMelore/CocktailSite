@@ -1,0 +1,8 @@
+.drinkPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: calc(0.75rem + 1vmin);
+    justify-content: center;
+    padding: 2em;
+}

@@ -1,0 +1,53 @@
+.drinkBody {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.drinkBody section {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    flex-grow: 1;
+    padding: 0 3em;
+}
+
+.drinkBody h2 {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.drinkBody ul {
+    padding: 0;
+}
+
+.drinkBody li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+
+.drinkBody h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+.dummy {
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+    position: relative;
+    margin-left: 2em;
+}
+
+.dummy img {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
