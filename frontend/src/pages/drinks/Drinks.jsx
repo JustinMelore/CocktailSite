@@ -21,13 +21,13 @@ export default function Drinks() {
         }
         getDrinks();
     }, [searchParams]);
-    
+
     return (
         
         <main className={style.drinkPage}>
             <h1>DRINKS</h1>
             <div className={style.searchbarContainer}>
-                <Searchbar/>
+                <Searchbar initialValue={searchParams.get("search")}/>
             </div>
 
             <section>
