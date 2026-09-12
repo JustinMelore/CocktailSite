@@ -6,27 +6,45 @@ export default function DrinkBody({drinkObject}) {
     
     return(
         <article className={style.drinkBody}>
-            <div className={style.dummy}>
-                <img alt={drinkName + " Image"}/>
+            <div className={style.upperContainer}>
+                <section className={style.dummy}>
+                    <img alt={drinkName + " Image"}/>
+                </section>
+                <section className={style.materialsSection}>
+                    <h1>{drinkName}</h1>
+                    <div className={style.listParentContainer}>
+                        <div className={style.listContainer}>
+                            <h2>Ingredients</h2>
+                            <ul>
+                                {
+                                    drinkObject.ingredients.map((elem, idx) => {
+                                        return <li key={idx}>{`${elem.ingredient} - ${elem.quantity}`}</li>
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div className={style.listContainer}>
+                            <h2>Garnish</h2>
+                            <ul>
+                                {
+                                    drinkObject.garnish.map((elem, idx) => {
+                                        return <li key={idx + drinkObject.ingredients.length}>{elem}</li>
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section>
-                <h1>{drinkName}</h1>
-                <h2>Ingredients</h2>
-                <ul>
+            <section className={style.stepsSection}>
+                <h2>Steps</h2>
+                <ol>
                     {
-                        drinkObject.ingredients.map((elem, idx) => {
-                            return <li key={idx}>{`${elem.ingredient} - ${elem.quantity}`}</li>
+                        drinkObject.steps.map((elem, idx) => {
+                            return <li key={idx}>{elem}</li>
                         })
                     }
-                </ul>
-                <h2>Garnish</h2>
-                <ul>
-                    {
-                        drinkObject.garnish.map((elem, idx) => {
-                            return <li key={idx + drinkObject.ingredients.length}>{elem}</li>
-                        })
-                    }
-                </ul>
+                </ol>
             </section>
         </article>
     );

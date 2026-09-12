@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   color: rgb(209, 204, 204);
-  overflow: hidden;
 }
 
 html {
@@ -16,7 +15,7 @@ body {
 }
 
 #root {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background-color: rgb(30, 30, 30);
 }

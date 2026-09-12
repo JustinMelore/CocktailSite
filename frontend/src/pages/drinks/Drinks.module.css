@@ -7,12 +7,10 @@
     /* font-size: calc(1rem + 1vmin);
      */
     font-size: calc(0.75rem + 1vmin);
-    overflow-y: scroll;
 }
 
 .drinkPage h1 {
     margin: 5vh 0;
-    overflow: visible;
     font-size: 4em;
     width: 100%;
     text-align: center;
@@ -25,7 +23,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5%;
     row-gap: 5%;
-    overflow: visible;
 }
 
 .searchbarContainer {
