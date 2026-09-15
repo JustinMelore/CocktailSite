@@ -1,5 +1,6 @@
 const express = require("express");
 const drinkRoutes = require("./drinkRoutes");
+const imageRoutes = require("./imageRoutes");
 const data = require("./data");
 
 const port = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const corsConfig = function(req, res, next) {
 
 app.use(corsConfig);
 app.use(drinkRoutes);
+app.use(imageRoutes);
 app.use(express.static("../frontend/dist"));
 app.use("/drinks", express.static("../frontend/dist"));
 
