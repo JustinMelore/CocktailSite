@@ -43,3 +43,20 @@
 .searchbarContainer form input {
     font-size: 1.5em;
 }
+
+/* Phone Layout */
+@media (max-width: 600px) {
+    
+    .home {
+        padding-top: 5em;
+    }
+    
+    .dummy {
+        width: 35%;
+        padding-bottom: 35%;
+    }
+
+    .home img {
+        border: 0.5em inset white;
+    }
+}
