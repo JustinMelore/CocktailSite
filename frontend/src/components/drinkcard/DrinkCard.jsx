@@ -23,7 +23,7 @@ export default function DrinkCard({drinkObject}) {
       }
       if(drinkObject && drinkObject.image)
         getImage();
-    }, [imgSrc, drinkObject]);
+    }, [drinkObject]);
 
     return (
       <Link className={style.drinkCardLink} to={`/drinks/${drinkObject.name}`}>
