@@ -23,7 +23,8 @@ export default function DrinkBody({drinkObject}) {
                 setImgSrc(logo);
             }
         }
-        getImage();
+        if(drinkObject && drinkObject.image)
+            getImage();
     }, [drinkObject])
 
     return(
