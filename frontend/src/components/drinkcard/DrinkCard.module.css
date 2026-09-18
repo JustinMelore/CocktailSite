@@ -15,6 +15,7 @@
 
 .drinkCardLink {
     overflow: visible;
+    text-decoration: none;
 }
 
 .drinkCard:hover {

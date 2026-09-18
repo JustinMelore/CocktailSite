@@ -21,7 +21,7 @@
 .dummy img {
     height: 100%;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     position: absolute;
     top: 0;
     left: 0;
@@ -75,8 +75,7 @@
 
 
 .stepsSection h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+    font-size: 2.25em;
     overflow: visible;
 }
 
@@ -113,7 +112,8 @@
     }
 
     .stepsSection h2 {
-        font-size: 2.5em;
+        font-size: 2.25em;
+        text-align: center;
     }
 
     ol {
@@ -170,5 +170,6 @@
 
     .stepsSection li {
         text-align: center;
+        font-size: 1.5em;
     }
 }
