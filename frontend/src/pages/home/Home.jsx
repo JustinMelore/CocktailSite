@@ -7,7 +7,7 @@ export default function Home() {
                 <img src="/logo.svg"/>
             </div>
 
-            <h1>Site Name Here</h1>
+            <h1>Your Cocktails</h1>
             <div className={style.searchbarContainer}>
                 <Searchbar/>
             </div>
