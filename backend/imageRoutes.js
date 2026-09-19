@@ -1,3 +1,6 @@
+/**
+ * Handles routing for image-related requests to the API
+ */
 const express = require("express");
 const data = require("./data");
 
