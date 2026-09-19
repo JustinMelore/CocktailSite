@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import style from "./DrinkCard.module.css";
 import { useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../../public/logo.svg";
 import { useEffect } from "react";
 export default function DrinkCard({drinkObject}) {
     

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "./DrinkBody.module.css";
-import logo from "../../assets/logo.svg";
+import logo from "../../../public/logo.svg";
 
 export default function DrinkBody({drinkObject}) {
     
