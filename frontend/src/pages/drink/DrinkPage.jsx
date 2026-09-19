@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import style from "./DrinkPage.module.css";
 import DrinkBody from "../../components/drinkBody/DrinkBody";
+import HomeButton from "../../components/homeButton/HomeButton";
 export default function DrinkPage() {
     
     const {drinkName} = useParams();
@@ -23,10 +24,13 @@ export default function DrinkPage() {
     }, []);
 
     return (
+        <>
+        <HomeButton/>
         <main className={style.drinkPage}>
             {
                 drinkObject ? <DrinkBody drinkObject={drinkObject}/> : <h1>Could not find drink with name "{drinkName}"</h1>
             }
         </main>
+        </>
     );
 }
