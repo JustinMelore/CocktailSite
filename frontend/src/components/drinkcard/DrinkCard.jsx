@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import style from "./DrinkCard.module.css";
 import { useState } from "react";
-import logo from "../../../public/logo.svg";
 import { useEffect } from "react";
 export default function DrinkCard({drinkObject}) {
     
-    const [imgSrc, setImgSrc] = useState(logo);
+    const [imgSrc, setImgSrc] = useState(null);
+
     
     useEffect(() => {
       async function getImage() {
@@ -13,12 +13,12 @@ export default function DrinkCard({drinkObject}) {
           const url = import.meta.env.VITE_DEV_URL || "/";
           const response = await fetch(url + "api/images/" + drinkObject.image);
           if(!response.ok) {
-            return setImgSrc(logo);
+            return
           }
           const imgBlob = await response.blob();
           setImgSrc(URL.createObjectURL(imgBlob));
         } catch {
-          setImgSrc(logo);
+          return;
         }
       }
       if(drinkObject && drinkObject.image)
@@ -28,7 +28,7 @@ export default function DrinkCard({drinkObject}) {
     return (
       <Link className={style.drinkCardLink} to={`/drinks/${drinkObject.name}`}>
         <article className={style.drinkCard}>
-          <img alt={`${drinkObject.name ? drinkObject.name : "Drink"} Image`} src={imgSrc}/>
+          <img alt={`${drinkObject.name ? drinkObject.name : "Drink"} Image`} src={imgSrc || "/logo.svg"}/>
           <h2>{drinkObject && drinkObject.name ? drinkObject.name : "Drink Name"}</h2>
           <ul>
               {

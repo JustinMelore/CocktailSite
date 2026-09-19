@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import style from "./DrinkBody.module.css";
-import logo from "../../../public/logo.svg";
 
 export default function DrinkBody({drinkObject}) {
     
-    const [imgSrc, setImgSrc] = useState(logo);
+    const [imgSrc, setImgSrc] = useState(null);
     
     const drinkName = drinkObject ? drinkObject.name : "Drink";
     
@@ -15,12 +14,12 @@ export default function DrinkBody({drinkObject}) {
                 const url = import.meta.env.VITE_DEV_URL || "/";
                 const response = await fetch(url + "api/images/" + drinkObject.image);
                 if(!response.ok) {
-                    return setImgSrc(logo);
+                    return;
                 }
                 const imgBlob = await response.blob();
                 setImgSrc(URL.createObjectURL(imgBlob));
             } catch {
-                setImgSrc(logo);
+                return;
             }
         }
         if(drinkObject && drinkObject.image)
@@ -31,7 +30,7 @@ export default function DrinkBody({drinkObject}) {
         <article className={style.drinkBody}>
             <div className={style.upperContainer}>
                 <section className={style.dummy}>
-                    <img alt={drinkName + " Image"} src={imgSrc}/>
+                    <img alt={drinkName + " Image"} src={imgSrc || "/logo.svg"}/>
                 </section>
                 <section className={style.materialsSection}>
                     <h1>{drinkName}</h1>
