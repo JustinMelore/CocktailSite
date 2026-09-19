@@ -21,7 +21,7 @@ export default function DrinkPage() {
             }
         }
         getDrink();
-    }, []);
+    }, [drinkName]);
 
     return (
         <>
