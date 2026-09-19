@@ -34,3 +34,11 @@
 .searchbar input[type=submit]:hover {
     filter: brightness(0.9);
 }
+
+/* Phone Layout */
+@media (max-width: 600px) {
+    
+    .searchbar input[type=submit] {
+        width: 8%;
+    }
+}
