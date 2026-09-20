@@ -1,4 +1,5 @@
 import Searchbar from "../../components/searchbar/Searchbar";
+import AllDrinksButton from "../../components/viewAllDrinks/AllDrinksButton";
 import style from "./Home.module.css";
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <div className={style.searchbarContainer}>
                 <Searchbar/>
             </div>
+            <AllDrinksButton/>
         </main>
     )
 }

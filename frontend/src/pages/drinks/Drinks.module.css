@@ -3,14 +3,11 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    /* height: 100%; */
     min-height: 100%;
     height: fit-content;
-    /* font-size: calc(1rem + 1vmin);
-     */
     font-size: calc(0.75rem + 1vmin);
-    overflow-y: auto;
     margin-bottom: 2vh;
+    overflow-y: visible;
 }
 
 .drinkPage h1 {
@@ -21,6 +18,10 @@
     text-align: center;
 }
 
+.drinkPage a {
+    margin-bottom: 1em;
+}
+
 .drinkPage section {
 
     width: 90%;
@@ -29,6 +30,10 @@
     column-gap: 5%;
     row-gap: 5%;
     overflow: visible;
+}
+
+.drinkPage section a {
+    margin: 0;
 }
 
 .searchbarContainer {
@@ -46,6 +51,10 @@
     .drinkPage section {
         grid-template-columns: 1fr 1fr;
     }
+
+    .searchbarContainer {
+        height: 10vh;
+    }
 }
 
 /* Phone Layout */
@@ -57,5 +66,9 @@
 
     .drinkPage h1 {
         margin: 2vh 0 0 0;
+    }
+
+    .searchbarContainer {
+        height: 5vh;
     }
 }

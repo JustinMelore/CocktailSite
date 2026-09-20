@@ -35,8 +35,8 @@
     filter: brightness(0.9);
 }
 
-/* Phone Layout */
-@media (max-width: 600px) {
+/* Tablet Layout */
+@media (max-width: 1024px) {
     
     .searchbar input[type=submit] {
         width: 8%;

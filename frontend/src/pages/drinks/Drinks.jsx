@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router";
 import style from "./Drinks.module.css"
 import Searchbar from "../../components/searchbar/Searchbar";
+import AllDrinksButton from "../../components/viewAllDrinks/AllDrinksButton";
 export default function Drinks() {
 
     const [drinkList, setDrinkList] = useState([]);
@@ -29,7 +30,7 @@ export default function Drinks() {
             <div className={style.searchbarContainer}>
                 <Searchbar initialValue={searchParams.get("search")}/>
             </div>
-
+            <AllDrinksButton/>
             <section>
             {
                 drinkList.map((elem, index) => {
