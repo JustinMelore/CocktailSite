@@ -3,11 +3,8 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    min-height: 100%;
-    height: fit-content;
     font-size: calc(0.75rem + 1vmin);
     margin-bottom: 2vh;
-    overflow-y: visible;
 }
 
 .drinkPage h1 {
@@ -27,9 +24,8 @@
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5%;
-    row-gap: 5%;
-    overflow: visible;
+    column-gap: 5vw;
+    row-gap: 5vh;
 }
 
 .drinkPage section a {
@@ -61,7 +57,7 @@
 @media (max-width: 600px) {
     .drinkPage section {
         grid-template-columns: 1fr;
-        row-gap: 3%;
+        row-gap: 3vh;
     }
 
     .drinkPage h1 {
