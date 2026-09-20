@@ -5,6 +5,7 @@
     align-items: center;
     font-size: calc(0.75rem + 1vmin);
     margin-bottom: 2vh;
+    overflow: visible;
 }
 
 .drinkPage h1 {
@@ -20,7 +21,7 @@
 }
 
 .drinkPage section {
-
+    overflow: visible;
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
